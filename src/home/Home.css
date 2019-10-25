@@ -1,0 +1,11 @@
+#root{
+    background-color: lightslategray;
+    height: 100vh;
+}
+#landing-photo{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 30px;
+    height: 200px;
+}
