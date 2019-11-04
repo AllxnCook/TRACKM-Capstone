@@ -5,6 +5,8 @@ import moment from 'moment'
 import Card from 'react-bootstrap/Card'
 import Dropdown from 'react-bootstrap/Dropdown'
 import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
+import './TimeCard.css'
 
 
 class ClockInCard extends Component {
@@ -59,43 +61,8 @@ class ClockInCard extends Component {
 
     render() {
         return (
-            // <Card className="clock-in-card" bg="dark" text="white" style={{ width: '18rem' }}>
-            //     <Card.Body>
-            //         <Dropdown>
-            //             <Dropdown.Toggle variant="secondary" id="dropdown-basic">
-            //                 Bus Number
-            //         </Dropdown.Toggle>
-            //             <Dropdown.Menu
-            //                 className="form-control"
-            //                 id="busId"
-            //                 value={this.state.busId}
-            //                 onChange={this.handleFieldChange}
-            //             ><Dropdown.Item>
-            //                     {this.state.buses.map(bus => (
-            //                         <option
-            //                             key={bus.id.busNumber}
-            //                             value={bus.id}
-            //                         >
-            //                             {bus.busNumber}
-            //                         </option>
-            //                     ))}
-            //                 </Dropdown.Item>
-            //             </Dropdown.Menu>
-            //         </Dropdown>
-            //         <Form>
-            //             <Form.Check
-            //                 label={`Pre-Trip Inspection`}
-            //                 onChange={this.handleFieldChange}
-            //             />
-            //         </Form>
-            //         <Form.Group controlId="exampleForm.ControlTextarea1">
-            //             <Form.Label>Notes:</Form.Label>
-            //             <Form.Control onChange={this.handleFieldChange} as="textarea" rows="3" />
-            //         </Form.Group>
-            //         <Card.Link onClick={this.newClockInCard} href="">{`Clock In`}</Card.Link>
-            //     </Card.Body>
-            // </Card>
-            <div className="card">
+
+            <div className="card" id="clockin-card">
                 <div className="card-content">
                     <select
                         className="form-control"
@@ -124,7 +91,7 @@ class ClockInCard extends Component {
 
                         onChange={this.handleFieldChange}></input><br />
 
-                    <button onClick={this.newClockInCard}>Clock In</button>
+                    <Button variant="secondary"onClick={this.newClockInCard}>Clock In</Button>
                 </div>
 
             </div>

@@ -1,16 +1,40 @@
 .card {
-    /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    border-radius: 5px; /* 5px rounded corners */
-    background-color:#343A40;
+    border-radius: 10px;
+    background:#343A40;
     width: 300px;
     height: 280px;
+    margin: 10px;
   }
+.select.form-control{
+  color: white;
+}
   .card-content {
     margin-top: 0;
-    margin-bottom: .5em;
+    margin-bottom: 0;
     font-weight: bold;
     color: white;
     background-color:  #343A40;
+    width: 298px;
+    height: 280px;
   }
+  #busId {
+    background-color: #343A40;
+    color: white;
+  }
+.container-cards {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin: 10px;
+  justify-content: center;
+  background-color: lightslategray;
+}
+#clockin-card {
+  display: flex;
+  justify-content: center;
+}
+.logout-btn{
+  margin: 5px;
+}

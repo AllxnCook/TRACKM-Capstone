@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ClockOutManager from './ClockOutManager'
+import Button from 'react-bootstrap/Button'
 import moment from 'moment'
 
 
@@ -67,7 +68,7 @@ class ClockOutCard extends Component {
                         onChange={this.handleCheckboxChange}
                     ></input><label>Post-Trip Inspection</label><br />
 
-                    <button onClick={this.clockOutUpdate}>Clock Out</button>
+                    <Button variant="secondary"onClick={this.clockOutUpdate}>Clock Out</Button>
                 </div>
 
             </div>

@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import RegistrationManager from "../auth/RegistrationManager"
+import Button from 'react-bootstrap/Button'
 import { Link } from "react-router-dom";
 
 class Register extends Component {
@@ -86,15 +87,15 @@ class Register extends Component {
 
                         <Link to={`/home`}>
 
-                            <button
-
+                            <Button
+                                variant="light"
                                 type="submit"
                                 disabled={this.state.loadingStatus}
                                 onClick={this.createUser}
 
                             >Submit
 
-                    </button>
+                    </Button>
 
                         </Link>
 
