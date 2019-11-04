@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import LoginManager from './LoginManager'
+import Button from 'react-bootstrap/Button'
 
 // component to display login information and validate credentials
 
@@ -48,7 +49,7 @@ class Login extends Component {
                         placeholder="Password"
                         required="" />
                     </div>
-                    <button type="submit">Sign In</button>
+                    <Button variant="light" type="submit">Sign In</Button>
                 </fieldset>
             </form>
         )

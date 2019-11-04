@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import TimeCard from './TimeCard'
 import TimeCardManager from './TimeCardManager'
+import Button from 'react-bootstrap/Button'
+import { Link } from 'react-router-dom'
+import './TimeCard.css'
 
 
 class TimeCardList extends Component {
@@ -30,21 +33,30 @@ class TimeCardList extends Component {
                 })
             })
     }
+    //method for handling logout functionality
+    handleLogout() {
+        window.localStorage.clear()
+    }
     //render method to print time cards to DOM
     render() {
         return (
             <>
                 <section className="section-content">
-                    <button type="button"
+                    <Button type="button"
                         className="new-card-btn"
+                        variant="secondary"
                         onClick={() => { this.props.history.push("/trips/clockin") }}>
                         New Trip
-                </button>
+                </Button><Link to={'/'}>
+                <Button type="button"
+                className="logout-btn"
+                variant="secondary"
+                onClick={this.handleLogout}>Logout</Button></Link>
                 </section>
                 <div className="container-cards">
                     {this.state.fullCard.map(singleCard =>
-                    <TimeCard key={singleCard.id} timecardProp={singleCard} deleteCard={this.deleteCard} {...this.props} />)}
-            </div>
+                        <TimeCard key={singleCard.id} timecardProp={singleCard} deleteCard={this.deleteCard} {...this.props} />)}
+                </div>
             </>
         )
     }

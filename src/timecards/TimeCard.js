@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Card from 'react-bootstrap/Card'
 import Dropdown from 'react-bootstrap/Dropdown'
 import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 import './TimeCard.css'
 
 
@@ -20,7 +21,7 @@ class TimeCard extends Component {
                     <p>Notes: {this.props.timecardProp.notes}</p>
                     <p>Start: {this.props.timecardProp.startTime}</p>
                     <p>End: {this.props.timecardProp.endTime}</p>
-                    <button type="button" id="delete-trip-btn" onClick={() => this.props.deleteCard(this.props.timecardProp.id)}>Delete</button>
+                    <Button variant="secondary" type="button" id="delete-trip-btn" onClick={() => this.props.deleteCard(this.props.timecardProp.id)}>Delete</Button>
                 </div>
             </div>
         )
