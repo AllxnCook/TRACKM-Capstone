@@ -2,9 +2,6 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import ClockInManager from './ClockInManager';
 import moment from 'moment'
-import Card from 'react-bootstrap/Card'
-import Dropdown from 'react-bootstrap/Dropdown'
-import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import './TimeCard.css'
 
